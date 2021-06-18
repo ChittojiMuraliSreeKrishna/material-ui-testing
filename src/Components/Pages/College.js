@@ -22,7 +22,7 @@ const College = () => {
       {isMobile ? (
         <Grid container justify="space-between">
           <Grid item>
-            <Button variant="contained" color="primary" component={Link} to="/">
+            <Button variant="contained" color="primary" component={Link} to={process.env.PUBLIC_URL + "/"}>
               <ChevronLeftIcon />
               <Typography variant="button">Home</Typography>
               <HomeIcon style={{ marginLeft: 15 }} />
@@ -33,7 +33,7 @@ const College = () => {
               variant="contained"
               color="primary"
               component={Link}
-              to="/About"
+              to={process.env.PUBLIC_URL + "/About"}
             >
               <PersonIcon style={{ marginRight: 15 }} />
               <Typography variant="button">About</Typography>
