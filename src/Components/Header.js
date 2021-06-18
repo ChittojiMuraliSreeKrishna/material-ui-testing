@@ -104,7 +104,7 @@ const Header = (props) => {
                     <MenuItem
                       onClick={() => setAnchorEl(null)}
                       component={Link}
-                      to="/"
+                      to={process.env.PUBLIC_URL + "/"}
                     >
                       <ListItemIcon>
                         <HomeIcon />
@@ -114,7 +114,7 @@ const Header = (props) => {
                     <MenuItem
                       onClick={() => setAnchorEl(null)}
                       component={Link}
-                      to="/College"
+                      to={process.env.PUBLIC_URL + "/College"}
                     >
                       <ListItemIcon>
                         <SchoolIcon />
@@ -124,7 +124,7 @@ const Header = (props) => {
                     <MenuItem
                       onClick={() => setAnchorEl(null)}
                       component={Link}
-                      to="/About"
+                      to={process.env.PUBLIC_URL + "/About"}
                     >
                       <ListItemIcon>
                         <PersonIcon />
@@ -134,7 +134,7 @@ const Header = (props) => {
                     <MenuItem
                       onClick={() => setAnchorEl(null)}
                       component={Link}
-                      to="/Personal"
+                      to={process.env.PUBLIC_URL + "/Personal"}
                     >
                       <ListItemIcon>
                         <BookmarksIcon />
@@ -145,19 +145,28 @@ const Header = (props) => {
                 </>
               ) : (
                 <div style={{ marginRight: "2rem" }}>
-                  <Button variant="text" color="default">
+                  <Button variant="text" color="default"
+                      component={Link}
+                      to={process.env.PUBLIC_URL + "/"}
+                      onClick={() => setAnchorEl(null)}>
                     <HomeIcon />
                     Home
                   </Button>
-                  <Button variant="text" color="default">
+                  <Button variant="text" color="default" component={Link}
+                      onClick={() => setAnchorEl(null)}
+                      to={process.env.PUBLIC_URL + "/College"}>
                     <SchoolIcon />
                     College
                   </Button>
-                  <Button variant="text" color="default">
+                  <Button variant="text" color="default" component={Link}
+                      onClick={() => setAnchorEl(null)}
+                      to={process.env.PUBLIC_URL + "/About"}>
                     <PersonIcon />
                     About
                   </Button>
-                  <Button variant="text" color="default">
+                  <Button variant="text" color="default"component={Link}
+                      onClick={() => setAnchorEl(null)}
+                      to={process.env.PUBLIC_URL + "/Personal"}>
                     <BookmarksIcon />
                     Personal
                   </Button>
@@ -166,10 +175,10 @@ const Header = (props) => {
             </Toolbar>
           </AppBar>
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/College" component={College} />
-            <Route exact path="/About" component={About} />
-            <Route exact path="/Personal" component={Personal} />
+            <Route exact path={process.env.PUBLIC_URL + "/"} component={Home} />
+            <Route exact path={process.env.PUBLIC_URL + "/College"} component={College} />
+            <Route exact path={process.env.PUBLIC_URL + "/About"} component={About} />
+            <Route exact path={process.env.PUBLIC_URL + "/Personal"} component={Personal} />
           </Switch>
         </BrowserRouter>
       </HideOnScroll>
