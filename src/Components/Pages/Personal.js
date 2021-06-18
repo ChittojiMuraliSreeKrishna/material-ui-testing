@@ -16,7 +16,7 @@ const Personal = () => {
             component={Link}
             variant="contained"
             color="primary"
-            to="/About"
+            to={process.env.PUBLIC_URL + "/About"}
           >
             <ChevronLeftIcon />
             <Typography variant="button">About</Typography>
