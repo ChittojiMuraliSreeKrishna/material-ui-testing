@@ -16,7 +16,7 @@ const Home = () => {
             component={Link}
             variant="contained"
             color="primary"
-            to="/College"
+            to={process.env.PUBLIC_URL + "/College"}
           >
             <SchoolIcon style={{ marginRight: 15 }} />
             <Typography variant="button">College</Typography>
