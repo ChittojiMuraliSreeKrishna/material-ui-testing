@@ -26,7 +26,7 @@ const About = () => {
               variant="contained"
               color="primary"
               component={Link}
-              to="/College"
+              to={process.env.PUBLIC_URL +  "/College"}
             >
               <ChevronLeftIcon />
               <Typography variant="button">College</Typography>
@@ -38,7 +38,7 @@ const About = () => {
               variant="contained"
               color="primary"
               component={Link}
-              to="/Personal"
+              to={process.env.PUBLIC_URL + "/Personal"}
             >
               <BookmarksIcon style={{ marginRight: 15 }} />
               <Typography variant="button">Personal</Typography>
